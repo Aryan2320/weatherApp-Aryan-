@@ -6,9 +6,9 @@ import humidity from './humidity.png';
 import mist from './mist.png';
 import rain from './rain.png';
 import snow from './snow.png';
-// import wind from './wind.png';
+import wind from './wind.png';
 import error from './404.png';
-// import nightimg from './night.jpg';
+import nightimg from './night.jpg';
 
 const WeatherDisplay = () => {
     const [apiData, setApiData] = useState([]);
@@ -49,6 +49,9 @@ const WeatherDisplay = () => {
                 case 'Haze':
                     setImage(mist);
                     break;
+                    case 'Drizzle':
+                        setImage(rain);
+                        break;
                 default:
                     break;
             }
